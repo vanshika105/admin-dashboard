@@ -23,10 +23,9 @@ const Dashboard = () => {
   } = useStateContext();
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap overflow-hidden flex-col m-2 md:m-4 md:mx-7">
-      <div>
-        <MainHeader />
-      </div>
+    <div className="m-2 md:m-4 md:mx-7">
+    <MainHeader />
+    <div className="flex flex-wrap lg:flex-nowrap overflow-hidden flex-col">
       <div className="flex flex-wrap lg:justify-between lg:gap-0 gap-2 mt-10">
         {earningData.map((item) => (
           <Card item={item} />
@@ -62,6 +61,7 @@ const Dashboard = () => {
         </div>
         <ProductTable products={dummyProductData} />
       </div>}
+    </div>
     </div>
   );
 };
