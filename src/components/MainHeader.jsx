@@ -55,7 +55,7 @@ const MainHeader = () => {
     <div className="flex justify-between">
         {screenSize<=900 && <NavButton title="Menu" customFunc={handleActiveMenu} color="gray" icon={<AiOutlineMenu />} />}
       <p>
-        <span className="text-md font-semibold dark:text-gray-300">
+        <span className="text-sm md:text-base font-semibold dark:text-gray-300">
           Hello, Shahrukh <Emoji symbol="👋" label="hand" />
         </span>
       </p>
