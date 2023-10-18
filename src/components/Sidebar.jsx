@@ -26,9 +26,9 @@ const Sidebar = () => {
   };
 
   const activeLink =
-    "flex items-center gap-3 pl-2 py-2 rounded-lg text-white text-11 bg-activeLink mx-4 m-2";
+    "flex items-center gap-3 pl-2 py-2 rounded-lg text-white text-11 bg-activeLink m-2";
   const normalLink =
-    "flex items-center gap-3 pl-2 py-2 rounded-lg text-gray-100 text-11 hover:text-white hover:bg-activeLink mx-4 m-2";
+    "flex items-center gap-3 pl-2 py-2 rounded-lg text-gray-100 text-11 hover:text-white hover:bg-activeLink m-2";
 
   return (
     <div className="h-screen bg-sidebarColor dark:bg-secondary-dark-bg md:overflow-hidden overflow-auto md:hover:overflow-auto pb-5 text-gray-100">
@@ -46,7 +46,7 @@ const Sidebar = () => {
                 key={item.title}
                 onClick={handleCloseSidebar}
                 className={({ isActive }) => {
-                  return isActive ? activeLink : normalLink;
+                  return isActive ? `${activeLink} mx-4` : `${normalLink} mx-4`;
                 }}
               >
                 <span>{item.icon}</span>
@@ -57,7 +57,7 @@ const Sidebar = () => {
               </NavLink>
             ))}
           </div>
-          <NavLink to="/" className={`mt-52 ${activeLink} mx-0 rounded-sm`}>
+          <NavLink to="/" className={`mt-52 ${activeLink} mx-2 rounded-sm`}>
               <img className="rounded-full w-7 h-7" src={avatar} />
               <div>
                 <p className="text-11 text-gray-300">Evano</p>
