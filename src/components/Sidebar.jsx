@@ -57,7 +57,7 @@ const Sidebar = () => {
               </NavLink>
             ))}
           </div>
-          <NavLink to="/" className={`mt-52 ${activeLink} mx-1 rounded-sm`}>
+          <NavLink to="/" className={`mt-52 ${activeLink} mx-0 rounded-sm`}>
               <img className="rounded-full w-7 h-7" src={avatar} />
               <div>
                 <p className="text-11 text-gray-300">Evano</p>
