@@ -64,7 +64,7 @@ const Sidebar = () => {
                 <p className=" text-9 text-gray-400">Project Manager</p>
               </div>
               <button
-                className={`text-gray-400 transform text-base ml-6 p-3 ${
+                className={`text-gray-400 transform text-base ml-4 p-3 ${
                   isOpen ? "rotate-180" : "rotate-0"
                 } transition-transform`}
                 onClick={toggleDropdown}
