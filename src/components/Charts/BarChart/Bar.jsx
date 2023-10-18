@@ -1,0 +1,43 @@
+const ChartBar = (props) => {
+  let barFillHeight = "0%";
+
+  if (props.maxValue > 0) {
+    barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
+  }
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const d = new Date();
+  const currentMonth = months[d.getMonth()];
+
+  return (
+    <div className="flex h-full flex-col items-center gap-4">
+      <div className="h-full w-6 sm:w-8 md:w-11 rounded-xl flex flex-col justify-end">
+          <div
+            className={`w-full rounded-xl hover:bg-barColor hover:drop-shadow-xl transition duration-300 ${
+              props.label === currentMonth ? "bg-barColor" : "bg-lightPurple"
+            }`}
+            style={{ height: barFillHeight, color: "#5A32EA" }}
+          ></div>
+          {/* <span className="hidden absolute top-0 left-0 p-2 bg-white text-black group-hover:block">{props.value}</span> */}
+      </div>
+      <div className="text-xs font-semibold text-center text-gray-600">
+        {props.label}
+      </div>
+    </div>
+  );
+};
+
+export default ChartBar;

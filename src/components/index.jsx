@@ -1,0 +1,11 @@
+export { default as ThemeSettings } from './ThemeSettings';
+export { default as Sidebar } from './Sidebar';
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export {default as Card} from './UI/Card';
+export {default as BarChart} from './Charts/BarChart/BarChart';
+export {default as MainHeader} from './MainHeader';
+export {default as DoughnutChart} from './Charts/BarChart/DoughnutChart';
+export {default as ProductTable} from './ProductTable'; 
+export {default as Dropdown} from './UI/Dropdown';
+export {default as SearchBar} from './UI/SearchBar';
